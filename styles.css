@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.sensei-accent {
+  color: #ff3333;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #8a0000 0%, #ff3333 100%);
+}
+
+@keyframes quickSlash {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) skewX(-15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) skewX(0);
+  }
+}
+
+@keyframes quickFadeOut {
+  0% { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% { 
+    opacity: 0;
+    transform: translateX(100px) skewX(20deg);
+  }
+}
+
+@keyframes shurikenSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes quickFlash {
+  0% { box-shadow: 0 0 0 rgba(255, 51, 51, 0); }
+  50% { box-shadow: 0 0 15px rgba(255, 51, 51, 0.7); }
+  100% { box-shadow: 0 0 0 rgba(255, 51, 51, 0); }
+}
+
+.quick-stagger-1 { 
+  opacity: 0;
+  animation: quickSlash 0.25s ease-out 0s forwards; 
+}
+.quick-stagger-2 { 
+  opacity: 0;
+  animation: quickSlash 0.25s ease-out 0.05s forwards; 
+}
+.quick-stagger-3 { 
+  opacity: 0;
+  animation: quickSlash 0.25s ease-out 0.1s forwards; 
+}
+.quick-stagger-4 { 
+  opacity: 0;
+  animation: quickSlash 0.25s ease-out 0.15s forwards; 
+}
+
+.quick-exit { 
+  animation: quickFadeOut 0.3s ease-in forwards; 
+}
+
+.quick-page-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: quickSlash 0.25s ease-out forwards;
+}
+
+.sensei-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.sensei-button:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.3s ease;
+}
+
+.sensei-button:hover:after {
+  left: 100%;
+}
+
+.sensei-button:hover {
+  animation: quickFlash 0.5s ease-out;
+}
+
+.sensei-card {
+  transition: all 0.2s ease;
+}
+
+.sensei-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 51, 51, 0.15);
+}
+
+.input-custom {
+  background: rgba(40, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.input-custom:focus {
+  border-color: rgba(255, 51, 51, 0.5);
+  box-shadow: 0 0 0 2px rgba(255, 51, 51, 0.2);
+}
+
+.login-card {
+  background: rgba(40, 10, 10, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 51, 51, 0.2);
+}
+
+.captcha-container {
+  background: rgba(30, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  position: relative;
+  margin: 1rem 0;
+  border: 1px solid rgba(255, 51, 51, 0.15);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.captcha-container:hover {
+  border-color: rgba(255, 51, 51, 0.25);
+}
+
+.captcha-text {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 5px;
+  text-align: center;
+  padding: 4px 0;
+  user-select: none;
+}
+
+.captcha-char {
+  display: inline-block;
+  margin: 0 2px;
+  position: relative;
+  transform-origin: center;
+}
+
+.refresh-captcha {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgba(255, 85, 85, 0.7);
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.refresh-captcha:hover {
+  color: #ff8888;
+  background: rgba(255, 51, 51, 0.1);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+input[type="text"].input-custom.captcha-input {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+  margin-top: 0;
+  background: rgba(50, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+input[type="text"].input-custom.captcha-input:focus {
+  background: rgba(60, 0, 0, 0.4);
+}
+
+input[type="radio"] {
+  accent-color: #ff3333;
+  width: 16px;
+  height: 16px;
+}
+
+/* CHAT STYLES */
+.message-avatar {
+  position: absolute;
+  top: 2px;
+  left: -26px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  border: 1px solid;
+}
+
+.user-message .message-avatar {
+  background: rgba(90, 0, 0, 0.6);
+  border-color: rgba(255, 51, 51, 0.4);
+}
+
+.ai-message .message-avatar {
+  background: rgba(40, 40, 40, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
+}

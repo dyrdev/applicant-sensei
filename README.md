@@ -100,7 +100,7 @@ Applicant Sensei is an AI-powered career assistant designed to help job seekers 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -110,4 +110,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Applicant Sensei** - Because getting the job shouldn't be harder than doing the job.
+**Applicant Sensei** - Because getting the job shouldn’t be harder than doing the job.

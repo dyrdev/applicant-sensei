@@ -2,6 +2,8 @@
 
 ![Applicant Sensei Demo](applicant-sensei-dashboard.jpg)
 
+https://applicant-sensei.vercel.app/
+
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-2.2.19-06B6D4?logo=tailwind-css)](https://tailwindcss.com/)
 [![Babel](https://img.shields.io/badge/Babel-7.22.5-F9DC3E?logo=babel)](https://babeljs.io/)
